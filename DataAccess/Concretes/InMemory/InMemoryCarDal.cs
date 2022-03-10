@@ -1,5 +1,6 @@
 ﻿using DataAccess.Abstracts;
 using Entities.Concretes;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -56,6 +57,11 @@ namespace DataAccess.Concretes
         {
             Car carToFind = _cars.SingleOrDefault(c=>c.Id == id);
             return carToFind;
+        }
+
+        public List<CarDetailDto> GetCarDetailDtos()
+        {
+            throw new NotImplementedException();
         }
 
         public void Update(Car car)
