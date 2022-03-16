@@ -10,11 +10,7 @@ using System.Threading.Tasks;
 
 namespace Business.Abstracts
 {
-    public interface ICarService:IBaseService<Car>
+    public interface ICustomerService:IBaseService<Customer>
     {
-        IDataResult<List<Car>> GetCarsByColorId(int colorId);
-        IDataResult<List<Car>> GetCarsByBrandId(int brandId);
-        IDataResult<List<CarDetailDto>> GetCarDetailDtos();
-
     }
 }

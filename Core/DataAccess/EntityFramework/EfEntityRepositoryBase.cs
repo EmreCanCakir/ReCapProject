@@ -1,5 +1,5 @@
 ﻿using Core.DataAccess;
-using Core.Entities;
+using Core.Entities.Abstracts;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -22,7 +22,6 @@ namespace Core.DataAccess.EntityFramework
             {
                 var addedEntity = context.Entry(entity);
                 addedEntity.State = EntityState.Added;
-                context.SaveChanges();
             }
         }
 
