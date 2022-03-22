@@ -28,10 +28,10 @@ namespace WebAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
-            services.AddSingleton<ICustomerService,CustomerManager>();
-            services.AddSingleton<IColorService,ColorManager>();
-            services.AddSingleton<ICustomerDal, EfCustomerDal>();
-            services.AddSingleton<IColorDal,EfColorDal>();
+            //services.AddSingleton<ICustomerService,CustomerManager>();
+            //services.AddSingleton<IColorService,ColorManager>();
+            //services.AddSingleton<ICustomerDal, EfCustomerDal>();
+            //services.AddSingleton<IColorDal,EfColorDal>();
 
         }
 
