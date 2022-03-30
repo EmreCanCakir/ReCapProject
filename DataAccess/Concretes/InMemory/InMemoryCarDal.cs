@@ -64,6 +64,11 @@ namespace DataAccess.Concretes
             throw new NotImplementedException();
         }
 
+        public List<int> GetAllByCarId()
+        {
+            throw new NotImplementedException();
+        }
+
         public void Update(Car car)
         {
             Car carToUpdate = _cars.SingleOrDefault(c => c.Id == car.Id);

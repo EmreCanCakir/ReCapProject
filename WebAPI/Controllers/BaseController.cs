@@ -28,7 +28,7 @@ namespace WebAPI.Controllers
             return BadRequest(result);
         }
         [HttpDelete("delete")]
-        public IActionResult Delete(TEntity entity)
+        public IActionResult Delete([FromForm]TEntity entity)
         {
             var result = _service.Delete(entity);
             if (result.Success)
@@ -48,7 +48,7 @@ namespace WebAPI.Controllers
             return BadRequest(result);
         }
         [HttpGet("getbyid")]
-        public IActionResult GetById(int id)
+        public IActionResult GetById([FromForm]int id)
         {
             var result = _service.GetById(id);
             if (result.Success)
@@ -58,7 +58,7 @@ namespace WebAPI.Controllers
             return BadRequest(result);
         }
         [HttpPut("update")]
-        public IActionResult Update(TEntity entity)
+        public IActionResult Update([FromForm]TEntity entity)
         {
             var result = _service.Update(entity);
             if (result.Success)

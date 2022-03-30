@@ -32,5 +32,21 @@ namespace DataAccess.Concretes.EntityFramework
 
             }
         }
+
+       public List<int> GetAllByCarId()
+       {
+           List<int> array = new List<int>();
+           using (ReCapProjectContext context = new ReCapProjectContext())
+           {
+               
+               var result = context.Cars.FromSqlRaw("select * from dbo.Cars").ToList();
+               for (int i = 0; i < result.Count; i++)
+               {
+                   array.Add(result[i].Id);
+               }
+               return array;
+           }
+         
+       }
     }
 }

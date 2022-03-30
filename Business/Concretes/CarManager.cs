@@ -29,8 +29,7 @@ namespace Business.Concretes
         {
                 _carDal.Add(car);
                 return new SuccessResult(Messages.CarAdded);
-            
-               // return new ErrorResult(Messages.CarIsNotAdded);
+                // return new ErrorResult(Messages.CarIsNotAdded);
             
         }
 
@@ -53,6 +52,11 @@ namespace Business.Concretes
         public IDataResult<List<CarDetailDto>> GetCarDetailDtos()
         {
             return new SuccessDataResult<List<CarDetailDto>>(this._carDal.GetCarDetailDtos());
+        }
+
+        public IDataResult<List<int>> GetAllByCarId()
+        {
+            return new SuccessDataResult<List<int>>(_carDal.GetAllByCarId());
         }
 
         public IDataResult<List<Car>> GetCarsByBrandId(int brandId)
